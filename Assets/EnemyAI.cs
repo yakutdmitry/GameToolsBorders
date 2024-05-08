@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -14,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     public float attackRange, timeBetweenAttacks;
     public bool playerInAttackRange;
     bool alreadyAttacked;
+    [SerializeField] private float attackCount = 0;
+  
 
     private enum State
     {
@@ -34,6 +39,13 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (attackCount == 2)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
+        }
+        
         switch (currentState)
         {
             case State.Wander:
@@ -81,5 +93,13 @@ public class EnemyAI : MonoBehaviour
     {
         myNavMeshAgent.SetDestination(transform.position);
         transform.LookAt(player);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            attackCount += 1;
+        }
     }
 }
