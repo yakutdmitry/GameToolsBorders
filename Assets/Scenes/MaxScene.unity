@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 1981191991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -53.14, y: 39.15, z: -69.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -423,6 +423,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2840408720586757629, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840408720586757629, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 16b711e9031e098459c54a90556fd9bf, type: 2}
     - target: {fileID: 8181638070651785095, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: m_LocalPosition.x
       value: -56.20905
@@ -477,6 +485,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6229646402349884005}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6229646402349884010}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6229646402349884009}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6229646402349884008}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6229646402349884007}
   m_SourcePrefab: {fileID: 100100000, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
 --- !u!1 &6229646402349884004 stripped
 GameObject:
@@ -530,9 +550,62 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.42552376
-  m_Height: 2.2628517
+  m_Height: 2.0129814
   m_Direction: 1
-  m_Center: {x: 0.00020217896, y: 0.87178993, z: -0.07467842}
+  m_Center: {x: 0.00020217896, y: 0.9967251, z: -0.07467842}
+--- !u!114 &6229646402349884007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42f5086667aa244faeccdd6b0c2445d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6229646402349884008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc2381069fa21d4f947f956bcfaee38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6229646402349884009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ff8c2428c467a4e994146c61300ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 7
+  rotationSpeed: 15
+--- !u!114 &6229646402349884010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419d16c4a55378b44b695b66d7454e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movemementInput: {x: 0, y: 0}
+  verticalInput: 0
+  horizontalInput: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
