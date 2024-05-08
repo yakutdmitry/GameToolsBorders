@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 399135868}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539739262}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21066202, y: -0.017591761, z: 0.003791632, w: 0.9773933}
+  m_LocalRotation: {x: 0.21066202, y: -0.017591799, z: 0.0037916403, w: 0.9773933}
   m_LocalPosition: {x: 0.48, y: 6.03, z: -13.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -797,9 +797,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 399135864}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   timer: 3
   distanceToHunt: 15
   wanderDuration: 3
+  attackRange: 0
+  timeBetweenAttacks: 0
+  playerInAttackRange: 0
+  attackCount: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21066202, y: -0.017591761, z: 0.003791632, w: 0.9773933}
+  m_LocalRotation: {x: 0.21066202, y: -0.017591799, z: 0.0037916403, w: 0.9773933}
   m_LocalPosition: {x: 0.48, y: 6.03, z: -13.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
