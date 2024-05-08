@@ -9,12 +9,17 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent myNavMeshAgent;
 
     public Transform player;
+    public LayerMask playerLayer;
     public float timer, distanceToHunt, wanderDuration;
+    public float attackRange, timeBetweenAttacks;
+    public bool playerInAttackRange;
+    bool alreadyAttacked;
 
     private enum State
     {
         Wander,
-        HuntForPlayer
+        HuntForPlayer,
+        Attack
     }
 
     private State currentState;
@@ -45,6 +50,12 @@ public class EnemyAI : MonoBehaviour
                 }
 
                 break;
+
+            case State.Attack:
+                playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
+                Attack();
+
+                break;
         }
 
     }
@@ -64,5 +75,11 @@ public class EnemyAI : MonoBehaviour
         {
             currentState = State.HuntForPlayer;
         }
+    }
+
+    private void Attack()
+    {
+        myNavMeshAgent.SetDestination(transform.position);
+        transform.LookAt(player);
     }
 }
