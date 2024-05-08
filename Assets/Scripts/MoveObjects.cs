@@ -29,6 +29,8 @@ public class MoveObjects : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            Debug.Log("plessed");
+            
             if (_isMoving)
             {
                 RaycastHit hit;
@@ -47,7 +49,9 @@ public class MoveObjects : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            if (_isMoving)
+            Debug.Log("released");
+            
+            if (_isMoving && _Movable != null)
             {
                 _Movable.layer = 0;
                 _Movable = null;
