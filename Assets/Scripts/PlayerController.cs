@@ -22,11 +22,7 @@ public class PlayerController : MonoBehaviour
       _xInput = Input.GetAxis("Horizontal");
       _zInput = Input.GetAxis("Vertical");
       
-      // if (Input.mouseScrollDelta.y > 0)
-      // { 
-      //    // Cinemachine.m_Lens.FieldOfView -= 1;
-      //    Cinemachine.m_Lens.FieldOfView -= 1;
-      // }
+       
    }
 
    private void FixedUpdate()
