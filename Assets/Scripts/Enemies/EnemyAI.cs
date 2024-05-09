@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent myNavMeshAgent;
+    private Animator animator;
 
     public Transform player;
     public LayerMask playerLayer;
@@ -18,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     public bool playerInAttackRange;
     bool alreadyAttacked;
     [SerializeField] private float attackCount = 0;
-  
+
 
     private enum State
     {
@@ -34,6 +35,7 @@ public class EnemyAI : MonoBehaviour
     {
         myNavMeshAgent = GetComponent<NavMeshAgent>();
         currentState = State.Wander;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,12 +52,14 @@ public class EnemyAI : MonoBehaviour
         {
             case State.Wander:
                 timer += Time.deltaTime;
+                animator.SetBool("patrolling", true);
                 Wander();
-
+                
                 break;
 
             case State.HuntForPlayer:
                 myNavMeshAgent.SetDestination(player.position);
+                animator.SetBool("chasing", true);
                 if (myNavMeshAgent.remainingDistance > distanceToHunt)
                 {
                     currentState = State.Wander;
@@ -99,6 +103,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            animator.SetBool("punch", true);
             attackCount += 1;
         }
     }
