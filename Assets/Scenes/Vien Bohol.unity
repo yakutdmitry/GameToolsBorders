@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2840408720586757629, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3234785611296003064, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: m_Layer
       value: 2
