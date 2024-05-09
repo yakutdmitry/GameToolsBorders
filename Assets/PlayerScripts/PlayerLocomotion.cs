@@ -134,6 +134,11 @@ public class PlayerLocomotion : MonoBehaviour
           inAirTimer = 0;
           isGrounded = true;
           playerManager.isInteracting = false;
+          
+          if(isGrounded && !playerManager.isInteracting);
+          {
+             animatorManager.PlayTargetAnimation("Empty", true);
+          }
        }
        else
        {
