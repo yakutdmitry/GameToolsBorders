@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
    {
      HandleMovementInput();
      HandleSprintingInput();
-     //HandleJumpingInput
+     HandleJumpingInput();
      //HandleActionInput
    }
    private void HandleMovementInput()
@@ -65,4 +65,12 @@ public class InputManager : MonoBehaviour
        playerLocomotion.isSprinting = false;
      }
    }
+    private void  HandleJumpingInput()
+    {
+      if (jump_Input)
+      {
+        jump_Input = false;
+        playerLocomotion.HandleJumping();
+      }
+    }
 }

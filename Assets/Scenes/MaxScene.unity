@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
+  isGrounded: 0
 --- !u!114 &999270210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42f5086667aa244faeccdd6b0c2445d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &999270211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,10 +427,13 @@ MonoBehaviour:
     m_Bits: 1
   isSprinting: 0
   isGrounded: 0
+  isJumping: 0
   walkingSpeed: 1.5
   runningSpeed: 5
   sprintingSpeed: 7
   rotationSpeed: 15
+  jumpHeight: 3
+  gravityIntensity: -15
 --- !u!114 &999270212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: maxDistance
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: fallingVelocity
@@ -902,6 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42f5086667aa244faeccdd6b0c2445d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &6229646402349884008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
+  isGrounded: 0
 --- !u!114 &6229646402349884009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,10 +944,13 @@ MonoBehaviour:
     m_Bits: 0
   isSprinting: 0
   isGrounded: 0
+  isJumping: 0
   walkingSpeed: 1.5
   runningSpeed: 5
   sprintingSpeed: 7
   rotationSpeed: 15
+  jumpHeight: 3
+  gravityIntensity: -15
 --- !u!114 &6229646402349884010
 MonoBehaviour:
   m_ObjectHideFlags: 0
