@@ -446,6 +446,7 @@ MonoBehaviour:
   verticalInput: 0
   horizontalInput: 0
   b_Input: 0
+  jump_Input: 0
 --- !u!1 &1109760251
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: maxDistance
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: fallingVelocity
@@ -957,6 +958,7 @@ MonoBehaviour:
   verticalInput: 0
   horizontalInput: 0
   b_Input: 0
+  jump_Input: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
