@@ -41,8 +41,20 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentState == State.Wander)
+        {
+            animator.SetBool("Patrol", true);
+            animator.SetBool("Hunt", false);
+        }
 
-        if (attackCount == 2)
+        if (currentState == State.HuntForPlayer)
+        {
+            animator.SetBool("Hunt", true);
+            animator.SetBool("Patrol", false);
+        }
+        
+
+        if (attackCount == 1)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
@@ -52,14 +64,14 @@ public class EnemyAI : MonoBehaviour
         {
             case State.Wander:
                 timer += Time.deltaTime;
-                animator.SetBool("patrolling", true);
+                // animator.SetTrigger("Patrolling");
+
                 Wander();
-                
                 break;
 
             case State.HuntForPlayer:
                 myNavMeshAgent.SetDestination(player.position);
-                animator.SetBool("chasing", true);
+                // animator.SetTrigger("Chasing");
                 if (myNavMeshAgent.remainingDistance > distanceToHunt)
                 {
                     currentState = State.Wander;
@@ -99,12 +111,27 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(player);
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            animator.SetBool("punch", true);
-            attackCount += 1;
+            animator.SetBool("Punch", true);
+            StartCoroutine(attack());
         }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.SetBool("Punch", false);
+        }
+        
+    }
+
+    private IEnumerator attack()
+    {
+        yield return new WaitForSeconds(1.5f);
+        attackCount += 1;
     }
 }
