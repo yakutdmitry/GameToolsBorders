@@ -817,13 +817,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1680165754613883500, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6229646402349884006}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6229646402349884005}
+    - targetCorrespondingSourceObject: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6229646402349884008}
   m_SourcePrefab: {fileID: 100100000, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
 --- !u!1 &6229646402349884004 stripped
 GameObject:
@@ -857,6 +864,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &6229646402349884006
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.42552376
+  m_Height: 2.0129814
+  m_Direction: 1
+  m_Center: {x: 0.00020217896, y: 0.9967251, z: -0.07467842}
+--- !u!114 &6229646402349884008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229646402349884004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc2381069fa21d4f947f956bcfaee38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  isGrounded: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
