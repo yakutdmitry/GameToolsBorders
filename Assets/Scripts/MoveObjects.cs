@@ -35,7 +35,7 @@ public class MoveObjects : MonoBehaviour
             {
                 RaycastHit hit;
                 
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f, _racycastMovement))
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 2000f, _racycastMovement))
                 {
                     if (_Movable != null)
                     {
