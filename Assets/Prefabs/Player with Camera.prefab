@@ -131,7 +131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5581767862237436084}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33027297, y: 0.61836606, z: -0.32062083, w: 0.63698155}
+  m_LocalRotation: {x: -0.33027288, y: -0.6183661, z: 0.3206209, w: -0.63698155}
   m_LocalPosition: {x: -33.7, y: 47.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -200,10 +200,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7351378516729453002}
     m_Modifications:
-    - target: {fileID: 2086282526278026579, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: m_Center.y
-      value: 0.89
-      objectReference: {fileID: 0}
     - target: {fileID: 8181638070651785095, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.37
@@ -243,26 +239,6 @@ PrefabInstance:
     - target: {fileID: 8181638070651785095, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: maxDistance
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: runningSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: walkingSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: sprintingSpeed
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 8301412600087132444, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
-      propertyPath: rayCastHeightOffset
-      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 8845303686842504509, guid: c483f592a13b3cb4c956e4bc90c61d19, type: 3}
       propertyPath: m_Name
