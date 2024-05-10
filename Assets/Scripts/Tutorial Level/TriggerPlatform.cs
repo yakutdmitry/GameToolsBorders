@@ -7,9 +7,10 @@ public class TriggerPlatform : MonoBehaviour
 {  
    [SerializeField] private GameObject spherePrefab;
    [SerializeField] private bool _isSpawned;
+   [SerializeField] private GameObject platform;
    private void Start()
    {
-      spherePrefab.transform.position = GameObject.Find("Sphere Spawner").transform.position;
+      spherePrefab.transform.position = platform.transform.position;
    }
 
    private void OnTriggerEnter(Collider collision)
