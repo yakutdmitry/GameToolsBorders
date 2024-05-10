@@ -19213,7 +19213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32116622, y: -0.6237181, z: 0.31286415, w: 0.64026874}
+  m_LocalRotation: {x: 0.32116625, y: -0.623718, z: 0.31286418, w: 0.64026874}
   m_LocalPosition: {x: 41, y: 54.98, z: -1.0738907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50743,6 +50743,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player with Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7148125505430399698, guid: 693cefc10edd7344282d082aa51a4cb6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.64026874
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148125505430399698, guid: 693cefc10edd7344282d082aa51a4cb6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.32116625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148125505430399698, guid: 693cefc10edd7344282d082aa51a4cb6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.623718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148125505430399698, guid: 693cefc10edd7344282d082aa51a4cb6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.31286418
+      objectReference: {fileID: 0}
     - target: {fileID: 7351378516729453002, guid: 693cefc10edd7344282d082aa51a4cb6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41
@@ -50980,6 +50996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spherePrefab: {fileID: 8319828680599619210, guid: ea6ba85af31320641bbda7564588b6c5, type: 3}
   _isSpawned: 0
+  platform: {fileID: 384871569832708521}
 --- !u!65 &5372627751067912462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51267,7 +51284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
-  platform: {fileID: 0}
+  target: {fileID: 7588300663902194707}
 --- !u!65 &8499832734991801914
 BoxCollider:
   m_ObjectHideFlags: 0
