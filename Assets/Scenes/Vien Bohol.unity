@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.29459196, g: 0.398263, b: 0.5889411, a: 1}
+  m_IndirectSpecularColor: {r: 0.294592, g: 0.398263, b: 0.5889411, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e5338df3f8c11b344aca7cf206334b42, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -50980,6 +50980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spherePrefab: {fileID: 8319828680599619210, guid: ea6ba85af31320641bbda7564588b6c5, type: 3}
   _isSpawned: 0
+  platform: {fileID: 0}
 --- !u!65 &5372627751067912462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51267,7 +51268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
-  platform: {fileID: 0}
+  target: {fileID: 0}
 --- !u!65 &8499832734991801914
 BoxCollider:
   m_ObjectHideFlags: 0
