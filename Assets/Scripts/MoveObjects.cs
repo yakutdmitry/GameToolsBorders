@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+// using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MoveObjects : MonoBehaviour
@@ -29,7 +29,6 @@ public class MoveObjects : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            Debug.Log("plessed");
             
             if (_isMoving)
             {
