@@ -6,11 +6,11 @@ using UnityEngine;
 public class SphereTrigger : MonoBehaviour
 {
     [SerializeField] private bool isPressed;
-    [SerializeField] private GameObject platform;
+    [SerializeField] private Animator platform;
 
     private void Start()
     {
-        platform = GameObject.Find("FlyingPlatform");
+        platform = GameObject.Find("FlyingPlatform").GetComponentInChildren<Animator>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -20,7 +20,7 @@ public class SphereTrigger : MonoBehaviour
             // collision.gameObject.transform.Translate(0, -1, 0);
             isPressed = true;
             // transform.Translate(0, -2, 0);
-            platform.transform.Translate(0, 15, 0);
+            platform.SetBool("Activated", true);
         }
     }
 
@@ -30,7 +30,7 @@ public class SphereTrigger : MonoBehaviour
         {
             isPressed = false;
             // transform.Translate(0, 1, 0);
-            platform.transform.Translate(0, -15, 0);
+            platform.SetBool("Activated", false);
         }
         
     }
