@@ -110,7 +110,7 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(player);
     }
 
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
