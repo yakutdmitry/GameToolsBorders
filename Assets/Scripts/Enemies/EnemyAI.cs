@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange, timeBetweenAttacks;
     public bool playerInAttackRange;
     bool alreadyAttacked;
-    [SerializeField] private float attackCount = 0;
+    private float attackCount = 0;
 
 
     private enum State
@@ -56,8 +56,7 @@ public class EnemyAI : MonoBehaviour
 
         if (attackCount == 1)
         {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
         switch (currentState)
